@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="./assets/css/output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="font-Karla bg-Green-200 min-h-screen flex justify-center items-center">
+    <article class="bg-White rounded-2xl lg:w-736 w-full">
+      <form id="my-form" class="flex flex-col gap-10 p-10" novalidate>
+        
+        <div class="myform flex flex-col gap-8">
+          <h1 class="text-Heading">Contact Us</h1>
+          <div class="feild flex flex-col gap-6">
+            <div class="name flex md:flex-row flex-col gap-4 w-full max-h-83">
+              <div class="first flex flex-col gap-2 md:w-1/2 w-full">
+                <label class="text-BodyMDS" for="firstname">First Name <span>*</span></label>
+                <input class="px-6 py-3 border border-Grey-500 hover:border-Green-600 rounded-lg" type="text" id="firstname" name="firstname">
+                <span class="text-Red" id="firstname-error"></span>
+              </div>
+              <div class="last flex flex-col gap-2 md:w-1/2 w-full">
+                <label class="text-BodyMDS" for="lastname">last Name <span>*</span></label>
+                <input class="px-6 py-3 border border-Grey-500 hover:border-Green-600 rounded-lg" type="text" id="lastname" name="lastname">
+                <span class="text-Red" id="lastname-error"></span>
+              </div>
+            </div>
+            <!-- end of row 1 -->
+            <div class="email flex flex-col gap-2 max-h-83">
+              <label class="text-BodyMDS" for="email">Email Address <span>*</span></label>
+              <input class="px-6 py-3 border border-Grey-500 hover:border-Green-600 rounded-lg" type="text" id="email" name="email">
+              <span class="text-Red" id="email-error"></span>
+            </div>
+            <!-- end of row 2 -->
+            <div class="query flex flex-col gap-2 max-h-91">
+              <label for="query">Query Type <span>*</span></label>
+              <div id="query" class="query flex md:flex-row flex-col gap-4 w-full">
+                <div class="general flex gap-3 border border-Grey-500 px-6 py-3 rounded-lg md:w-1/2 w-full">
+                  <input type="radio" name="query" id="general-query">
+                  <label class="text-BodyMDR" for="general-query">General Enquiry</label>
+                </div>
+                <div class="support flex gap-3 border border-Grey-500 px-6 py-3 rounded-lg md:w-1/2 w-full">
+                  <input type="radio" name="query" id="support-query">
+                  <label class="text-BodyMDR" for="support-query">Support Request</label>
+                </div>                
+              </div>
+              <span class="text-Red" id="query-error"></span>
+            </div>
+            <!-- end of row 3 -->
+            <div class="msg flex flex-col gap-2 max-h-137">
+              <label class="text-BodyMDS" for="msg">Message <span>*</span></label>
+              <textarea class="px-6 py-3 h-105 rounded-lg border border-Grey-500" name="msg" id="msg"></textarea>
+              <span class="text-Red" id="msg-error"></span>
+            </div> 
+            <!-- end of msg -->
+          </div> <!-- end on fields -->
+        </div>
+        <div class="checkbox flex flex-col">
+          <div class="checkbox flex gap-4 ">
+            <input type="checkbox" name="gridCheck" id="gridCheck">
+            <label class="text-BodyMDS" for="gridCheck">I consent to being contacted by the team *</label>
+          </div>
+
+          <span class="text-Red" id="gridCheck-error"></span>
+        </div>
+        <button class="bg-Green-600 rounded-lg px-10 py-4 text-White text-BodyMD" type="submit">Submit</button>
+      </form>
+    </article>
+  </main>
+  
+<!-- 
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
+  <script src="./assets/js/index.js"></script>
+</body>
+</html>
