@@ -10,13 +10,19 @@
 </head>
 <body>
   <main class="font-Karla bg-Green-200 min-h-screen flex justify-center items-center">
-    <article class="bg-White rounded-2xl lg:w-736 w-full">
-      <form id="my-form" class="flex flex-col gap-10 p-10" novalidate>
-        
+    <article class="bg-White rounded-2xl lg:w-736 w-full  relative">
+      <div class="toast hidden p-6 absolute  -top-16 right-24 w-8/12 flex flex-col gap-2  bg-Grey-900 rounded-xl">
+        <div class="flex ">
+          <img src="./assets/images/icon-success-check.svg" alt="icon-success-check" class="">
+          <h1 class="text-White">  Message Sent! </h1>
+        </div>
+        <p class="text-Green-200">Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+      <form id="my-form" class="flex flex-col gap-10 p-10" novalidate>        
         <div class="myform flex flex-col gap-8">
           <h1 class="text-Heading">Contact Us</h1>
           <div class="feild flex flex-col gap-6">
-            <div class="name flex md:flex-row flex-col gap-4 w-full max-h-83">
+            <div class="name flex md:flex-row flex-col gap-4 w-full lg:h-83 h-full">
               <div class="first flex flex-col gap-2 md:w-1/2 w-full">
                 <label class="text-BodyMDS" for="firstname">First Name <span>*</span></label>
                 <input class="px-6 py-3 border border-Grey-500 hover:border-Green-600 rounded-lg" type="text" id="firstname" name="firstname">
@@ -29,13 +35,13 @@
               </div>
             </div>
             <!-- end of row 1 -->
-            <div class="email flex flex-col gap-2 max-h-83">
+            <div class="email flex flex-col gap-2 lg:h-83 h-full">
               <label class="text-BodyMDS" for="email">Email Address <span>*</span></label>
               <input class="px-6 py-3 border border-Grey-500 hover:border-Green-600 rounded-lg" type="text" id="email" name="email">
               <span class="text-Red" id="email-error"></span>
             </div>
             <!-- end of row 2 -->
-            <div class="query flex flex-col gap-2 max-h-91">
+            <div class="query flex flex-col gap-2 lg:h-91 h-full">
               <label for="query">Query Type <span>*</span></label>
               <div id="query" class="query flex md:flex-row flex-col gap-4 w-full">
                 <div class="general flex gap-3 border border-Grey-500 px-6 py-3 rounded-lg md:w-1/2 w-full">
@@ -71,9 +77,7 @@
     </article>
   </main>
   
-<!-- 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon! -->
+  <!--  -->
   <script src="./assets/js/index.js"></script>
 </body>
 </html>

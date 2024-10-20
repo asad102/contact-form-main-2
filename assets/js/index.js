@@ -46,8 +46,8 @@ document.getElementById('my-form').addEventListener('submit', function(event) {
   
 
     if (isValid) {
-      alert('Form is valid! Submitting...');
-
+      const successContainer = document.querySelector('.toast');
+      successContainer.classList.remove('hidden');
     }
 
     // Validate Radio Button Group (Query Type)
